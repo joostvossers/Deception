@@ -1,0 +1,28 @@
+{
+  "day 1": {
+    "arguments": ["blue", "purple", "green", "yellow", "grey", "red", "pink", "cyan"],
+    "attacks": {
+      "green": ["blue"],
+      "purple": ["yellow", "red", "pink"],
+      "blue": ["purple", "cyan", "grey"],
+      "yellow": ["green"]
+    }
+  },
+  "day 2": {
+    "arguments": ["green", "yellow", "grey", "red", "pink", "cyan"],
+    "attacks": {
+      "cyan": ["pink"],
+      "green": ["yellow", "cyan", "grey"],
+      "yellow": ["green"],
+      "grey": ["red"]
+    }
+  },
+  "day 3": {
+    "arguments": ["grey", "red", "pink", "cyan"],
+    "attacks": {
+      "cyan": ["grey", "red"],
+      "grey": ["cyan"],
+      "red": ["pink"]
+    }
+  }
+}
