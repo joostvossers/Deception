@@ -1,5 +1,5 @@
 """
-    Deception Detection in the Werewolf Game
+    'Detecting Deception in the Werewolf Game using Trust-Based Argumentation Frameworks'
     Trends in Interactive Intelligent Environments (5DV210) at Umeå University, 2023.
     Fanny Danelid, fada0025
     Joost Vossers, joge0053
@@ -10,17 +10,17 @@ import numpy as np
 # ==================== Initialisation ====================
 # Ask for input files:
 game_file_name = input("Please provide the filename containing the game input\n")
-trust_file_name = input("Please provide the filename containing the reasoning input\n")
+context_file_name = input("Please provide the filename containing the context input\n")
 
 # Open and read the game file:
 game_file_path = "input/" + game_file_name
 game_file = open(game_file_path)
 game_data = json.load(game_file)
 
-# Open and read the trust file:
-trust_file_path = "input/" + trust_file_name
-trust_file = open(trust_file_path)
-trust_data = json.load(trust_file)
+# Open and read the context file:
+context_file_path = "input/" + context_file_name
+context_file = open(context_file_path)
+context_data = json.load(context_file)
 
 # Initialise trust values at 0.5:
 trust = {}
@@ -30,10 +30,13 @@ for p in players:
 
 # ==================== Main Process ====================
 for day in game_data:
+    # Print progress:
     print("\nProcessing " + day + "...")
+
+    # Retrieve set of attacks:
     attacks = game_data[day]["attacks"]
 
-    # Remove people from the trust list that are no longer in the game:
+    # Remove arguments from the trust list that are no longer in the game:
     older_trust = trust.copy()  # copy to prevent issues
     removed = []
     for p in trust:
@@ -42,6 +45,7 @@ for day in game_data:
             removed.append(p)
             older_trust.pop(p)
     if removed:
+        # Print removed arguments:
         print("The following people have been removed from the game: " + str(removed))
     trust = older_trust.copy()
 
@@ -50,7 +54,7 @@ for day in game_data:
     for p in game_data[day]["arguments"]:
         attack_ranking[p] = 0
 
-    # Calculate attack ranking:
+    # Calculate attack levels:
     for attacked in attacks:
         attack_level = 0
         for attacker in attacks[attacked]:
@@ -113,14 +117,14 @@ for day in game_data:
 
     # ==================== Trust Updating ====================
     # Retrieve context information:
-    rules = trust_data[day]["rules"]
-    observations = trust_data[day]["observations"]
+    rules = context_data[day]["rules"]
+    observations = context_data[day]["observations"]
 
     # Check each observation:
-    for a in observations:
+    for obs in observations:
         # Split each observation into the action and the player:
-        action = a.rsplit(' ', 1)[0]
-        player = a.rsplit(' ', 1)[1]
+        action = obs.rsplit(' ', 1)[0]
+        player = obs.rsplit(' ', 1)[1]
 
         # Access the previous trust value:
         old_trust = trust[player]
