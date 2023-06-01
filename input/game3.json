@@ -1,0 +1,20 @@
+{
+  "day 1": {
+    "arguments": ["blue", "pink", "dark", "svart", "teal"],
+    "attacks": {
+      "dark": ["svart", "teal", "blue"],
+      "teal": ["dark"]
+    }
+  },
+  "day 2": {
+    "arguments": ["blue", "pink", "teal"],
+    "attacks": {
+      "pink": ["teal", "blue"],
+      "blue": ["pink"]
+    }
+  },
+  "day 3": {
+    "arguments": ["blue", "teal"],
+    "attacks": {}
+  }
+}

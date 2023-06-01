@@ -1,0 +1,32 @@
+{
+  "day 1": {
+    "rules": {
+      "positive": ["right attack", "right defend"],
+      "negative": ["wrong attack", "silent", "first attack"]
+    },
+    "observations": [
+      "first attack blue",
+      "wrong attack svart",
+      "wrong attack teal",
+      "wrong attack blue",
+      "right defend dark",
+      "silent pink"
+    ]
+  },
+  "day 2": {
+    "rules": {
+      "positive": ["right attack", "right defend"],
+      "negative": ["wrong attack", "first attack"]
+    },
+    "observations": [
+      "first attack teal",
+      "right defend teal",
+      "right defend blue",
+      "wrong attack pink"
+    ]
+  },
+  "day 3": {
+    "rules": {},
+    "observations": []
+  }
+}

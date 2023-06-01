@@ -1,0 +1,28 @@
+{
+  "day 1": {
+    "arguments": ["blue", "yellow", "maroon", "black", "teal", "svart", "green", "tin", "lilac", "grass"],
+    "attacks": {
+      "black": ["blue"],
+      "blue": ["svart", "teal", "grass", "black", "tin", "green", "lilac"],
+      "svart": ["yellow"]
+    }
+  },
+  "day 2": {
+    "arguments": ["yellow", "maroon", "black", "teal", "green", "tin", "lilac", "grass"],
+    "attacks": {
+      "black": ["tin"],
+      "yellow": ["lilac", "maroon", "grass", "black", "green"]
+    }
+  },
+  "day 3": {
+    "arguments": ["maroon", "teal", "green", "tin", "lilac", "grass"],
+    "attacks": {
+      "tin": ["teal", "green", "maroon"],
+      "teal": ["grass"]
+    }
+  },
+  "day 4": {
+    "arguments": ["maroon", "green", "lilac", "grass"],
+    "attacks": {}
+  }
+}
