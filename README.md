@@ -1,9 +1,9 @@
 # Towards Deception Detection in Multiplayer Dialogue Games using Trust-Based Argumentation  
 Umeå University, 2023.
 
-Joost Vossers
-Fanny Danelid
-Andreas Brännström
+Joost Vossers <br>
+Fanny Danelid <br>
+Andreas Brännström <br>
 Juan Carlos Nieves
 
 This repository is a simplified implementation of the proposed deception detection framework presented in the paper.
