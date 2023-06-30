@@ -1,8 +1,10 @@
 """
-    'Detecting Deception in the Werewolf Game using Trust-Based Argumentation Frameworks'
-    Trends in Interactive Intelligent Environments (5DV210) at Umeå University, 2023.
-    Fanny Danelid, fada0025
-    Joost Vossers, joge0053
+    'Towards Deception Detection in Multiplayer Dialogue Games using Trust-Based Argumentation'
+    Umeå University, 2023.
+    Joost Vossers
+    Fanny Danelid
+    Andreas Brännström
+    Juan Carlos Nieves
 """
 import json
 import numpy as np
